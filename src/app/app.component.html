@@ -1,0 +1,8 @@
+<div class="app-wrapper">
+    <div class="item-1" #startItem></div>
+    <div class="item-2" #endItem></div>
+
+    <ng-container *ngIf="arrows.length> 0">
+        <red-arrow *ngFor="let arrow of arrows" [object]="arrow"></red-arrow>
+    </ng-container>
+</div>

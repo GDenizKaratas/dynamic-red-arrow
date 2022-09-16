@@ -1,0 +1,41 @@
+<ng-container *ngIf="height > 0">
+    <ng-container *ngIf="width > 0">
+        <div class="arrow" [style.z-index]="zIndex" [style.top.px]="top" [style.left.px]="left" style="display: flex;">
+            <div class="box1" [style.height.px]="height" [style.width.px]="width/2"></div>
+            <div class="box1q" [style.height.px]="height" [style.width.px]="width/2-3"></div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="width <= 0">
+        <div class="arrow" [style.z-index]="zIndex" [style.top.px]="top" [style.left.px]="left">
+            <div class="box1"></div>
+            <div class="down-part">
+                <div class="box2" [style.width.px]="68-width" [style.height.px]="height-68">
+                    <div class="box3"></div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+</ng-container>
+
+<ng-container *ngIf="height < 0">
+    <ng-container *ngIf="width > 0">
+        <div class="arrow" [style.z-index]="zIndex" [style.top.px]="top" [style.left.px]="left" style="display: flex;">
+            <div class="box1" [style.height.px]="height" [style.width.px]="width/2"></div>
+            <div class="box1q" [style.height.px]="height" [style.width.px]="width/2-3"></div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="width <= 0">
+        <div class="arrow bottom" [style.z-index]="zIndex" [style.top.px]="top-38" [style.left.px]="left">
+
+            <div class="box1 bottom">
+                <div class="top-part" [style.top.px]="height+37" [style.height.px]="-height-38"
+                    [style.width.px]="-width+68">
+
+                </div>
+            </div>
+
+        </div>
+    </ng-container>
+
+</ng-container>
